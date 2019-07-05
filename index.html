@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>Big</title>
+  <link href="big.css" rel="stylesheet" type="text/css" />
+  <script src="big.js"></script>
+  <style>
+    .one {
+      white-space: nowrap;
+    }
+
+    em {
+      color: red;
+    }
+
+    img {
+      max-height: 100%;
+    }
+
+    .small {
+      transition: font-size 1s ease;
+    }
+
+    .hide, .hide3 {
+      transition: opacity 1s ease;
+    }
+
+    .hide2 {
+      opacity: 0.1;
+    }
+  </style>
+</head>
+<body class="light">
+  <div><img src="protocols.png"></div>
+  <div>
+    <em>Web of Peers</em>
+  </div>
+  <div>
+    @jiangplus
+  </div>
+  <div>
+    <div class="one">Void & Dat Project</div>
+    <br>
+    <div class="one">Kubernetes</div>
+  </div>
+  <div>
+    The Internet is a <em>global</em> system of <em>interconnected</em> computer networks
+  </div>
+  <div>
+    And nodes are <em>connected</em> to <em>exchange state</em> and <em>share data</em>
+  </div>
+  <div>
+    How do we access data?
+  </div>
+  <div>
+    <div><em>Location Addressing</em></div>
+    <br>
+    <i class="one">https://en.wikipedia.org/wiki/Content-addressable_storage</i>
+  </div>
+  <div>
+    Tell you <em>where</em> to get the content
+  </div>
+  <div>
+    Whoever controls that <em>location</em> controls the <em>content</em>
+  </div>
+  <div>
+    <div><em>Content Addressing</em></div>
+    <br>
+    <i class="">magnet:?xt=urn:btih:9f9165d9a281a9b8e782cd5176bbcc8256f
+    &dn=ubuntu-16.04.1-desktop.iso</i>
+  </div>
+  <div>
+    Tell you <em>what</em> the content is like
+  </div>
+  <div>
+<div><em>Integrity</em></div>
+
+<div><em>Cachable</em></div>
+
+<div>Location and source <em>independent</em></div>
+  </div>
+  <div>
+    <div class="one"><em>Client-Server</em> Architecture</div>
+    <br>
+    <div class="one"><em>Peer-to-Peer</em> Architecture</div>
+  </div>
+  <div>
+    <em>Decentralization</em>
+  </div>
+  <div><img src="web3_stack.png" style="width: 60%;"></div>
+  <div>
+    <div>Closer</div>
+    <div>Faster</div>
+    <div>Redundancy</div>
+    <div><em>More</em> peers, <em>more</em> capacity</div>
+  </div>
+  <div>
+    How can we find the <em>node</em> having that <em>data</em>?
+  </div>
+  <div>
+    <em>Distributed</em> Hash Table!
+  </div>
+  <div>
+<pre>
+dht["9f9165d9a281a9b8e782cd5176bbcc8256f"] = [
+  "192.168.1.100",
+  "222.222.222.222",
+  ...
+]
+</pre>
+  </div>
+  <div>
+    Every node keep some info about <em>nearest</em> peers
+  </div>
+  <div>
+    <div>Open, Permissionless, Resilent, Scalable</div>
+    <br>
+    <div>High latency</div>
+  </div>
+  <div>
+    How to connect other nodes?
+  </div>
+  <div>
+    <div>HTTP</div>
+    <div>WebSocket</div>
+    <div>uTP</div>
+    <div>QUIC</div>
+    <div>WebRTC</div>
+  </div>
+  <div>
+    libp2p
+  </div>
+  <div>
+<div class="one"><em>Slice</em> the file into chunks</div>
+
+<div class="one"><em>Parallel</em> download</div>
+
+<div class="one"><em>Verify</em> every chunk</div>
+  </div>
+  <div>
+    <em>MerkleTree</em>
+  </div>
+  <div><img src="merkle-tree-example.png"></div>
+  <div><em>IPFS</em></div>
+  <div>
+    How to publish new data?
+  </div>
+  <div><img src="append-only-log-0.png"></div>
+  <div>
+    Data could be <em>updated</em>
+  </div>
+  <div>
+    We need to model <em>state changes over time</em>
+  </div>
+  <div>
+    <em>Append-only Log</em>
+  </div>
+  <div><img src="append-only-log-1.png"></div>
+  <div><img src="append-only-log-2.png"></div>
+  <div><img src="append-only-log-3.png"></div>  
+  <div>
+    <em>dat</em>
+  </div>
+  <div>
+<pre>
+       + ---------------------------+
+Dat ~= | Dat cli, dat-js, etc       |
+       + ----------+----------------+
+       | Other     | Hyperdrive     |
+       + ----------+----------------+
+       | Discovery | Hypercore      |
+       + ----------+----------------+
+</pre>
+  </div>
+  <div class="one">
+    file system?
+  </div>
+  <div>
+    <em>Hyperdrive</em>
+  </div>
+  <div class="one">
+    chatting?
+  </div>
+  <div>
+    <em>Cabal</em>
+  </div>
+  <div>
+    p2p connection in the browser?
+  </div>
+  <div>
+    <em>Webtorrent</em>
+  </div>
+  <div>
+    Browser for P2P Applications?
+  </div>
+  <div>
+    <em>Beaker Browser</em>
+  </div>
+  <div>
+    incentive?
+  </div>
+  <div>
+    <em>Filecoin</em>
+  </div>
+  <div>
+<div class="one">share files : <em>IPFS</em></div>
+
+<div class="one">public names : <em>IPNS</em></div>
+
+<div class="one">feed : <em>hypercore</em>(dat)</div>
+
+<div class="one">database/dropbox : <em>hyperdrive</em>(dat)</div>
+
+<div class="one">public ledger : <em>blockchain!</em></div>
+  </div>
+
+  <div></div>
+  <div>Hard poblems:</div>
+  <div>1. <em>Connecting</em> any two nodes in the world</div>
+  <div>2. <em>Find</em> and <em>distribute</em> data effectively</div>
+  <div>3. <em>Share</em> data <em>fast</em> and <em>securely</em></div>
+  <div>Web 1.0 : <em>Readable</em></div>
+  <div>Web 2.0 : <em>Writable</em></div>
+  <div>Web 3.0 : <em>Connect</em> and <em>Share</em>, <em>Verify</em> and <em>Trust</em></div>
+  <div><img src="web3_stack.png"></div>
+
+  <div></div>
+
+<div><em>Web3</em> is <em>Revolution</em></div>
+
+<div><em>Web3</em> is <em>Hype</em></div>
+
+<div><em>Web3</em> is <em>Punk</em></div>
+
+<div><em>Web3</em> is <em>Hope</em></div>
+
+<div>Demo</div>
+
+<div>Thanks!</div>
+
+</body>
+</html>
